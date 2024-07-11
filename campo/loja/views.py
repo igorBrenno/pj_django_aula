@@ -5,7 +5,7 @@ from .models import Produto
 
 def pesquisar(request):
 
-    resp = Produto.objects.all()
+    resp = Produto.objects.filter(name="Empada")
     return HttpResponse(resp)
 
 def cadastrar(request):
