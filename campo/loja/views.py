@@ -5,11 +5,13 @@ from .models import Produto
 
 def pesquisar(request):
 
-    resp = Produto.objects.filter(name="Empada")
-    return HttpResponse(resp)
+    resp = Produto.objects.all()
+    # return HttpResponse(resp)
+    return render(request, "loja/pesquisar.html", {'resultado':resp})
 
 def cadastrar(request):
-    return render(request, 'template/cadastrar.html')
+    
+    return render(request, 'loja/cadastrar.html', {})
 
 def deletar(request):
     return render(request, 'template/deletar.html')
