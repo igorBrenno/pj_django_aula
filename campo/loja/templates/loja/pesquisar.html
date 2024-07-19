@@ -12,7 +12,19 @@
             border-collapse: collapse;
             padding: 10px;
     }
+        form {
+            padding: 10px;
+        }
     </style>
+
+
+
+    <form action="/loja/pesquisar" method="POST">
+        {% csrf_token %}
+        <label>Pesquisa</label>
+        <input type="text" value="" name="pesquisa" id="pesquisa">
+        <input type="submit" value="Send">
+    </form>
     <table>
     <tr>
         <Th>Nome</Th>
