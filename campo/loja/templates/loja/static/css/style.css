@@ -1,0 +1,8 @@
+table, th, td, tr{
+    border: solid 2px purple;
+    border-collapse: collapse;
+    padding: 10px;
+}
+form {
+    padding: 10px;
+}
